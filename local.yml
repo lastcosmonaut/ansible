@@ -9,3 +9,12 @@
     dnf:
       name: vocal
       state: latest
+  - name: Add inofficial Spotify repository
+    yum_repository:
+      name: negativo17
+      description: negativo17 repo
+      baseurl: http://negativo17.org/repos/fedora-spotify.repo
+  - name: Install Spotify
+    dnf:
+      name: spotify
+      state: latest

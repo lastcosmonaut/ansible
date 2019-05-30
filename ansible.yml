@@ -1,0 +1,13 @@
+- hosts: localhost
+  remote_user: root
+  tasks:
+    - name: "Install packages"
+      package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - "vim-enhanced"
+        - "zsh"
+        - "postgresql-server"
+        - "postgresql-contrib"
+        - "keepassxc"
